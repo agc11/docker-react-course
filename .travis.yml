@@ -9,7 +9,7 @@ script:
   - docker run agc11/docker-react-course npm run test -- --coverage
 
 deploy:
-  provicer: elasticbeanstalk
+  provider: elasticbeanstalk
   region: "us-west-2"
   app: "docker-course"
   env: "DockerCourse-env"
