@@ -7,3 +7,16 @@ before_install:
 
 script:
   - docker run agc11/docker-react-course npm run test -- --coverage
+
+deploy:
+  provicer: elasticbeanstalk
+  region: "us-west-2"
+  app: "docker-course"
+  env: "DockerCourse-env"
+  bucket_name: "elasticbeanstalk-eu-west-3-712919848738"
+  bucket_path: "docker-course"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: $AWS_SECRET_KEY
