@@ -10,7 +10,7 @@ script:
 
 deploy:
   provider: elasticbeanstalk
-  region: "us-west-2"
+  region: "us-west-3"
   app: "docker-course"
   env: "DockerCourse-env"
   bucket_name: "elasticbeanstalk-eu-west-3-712919848738"
